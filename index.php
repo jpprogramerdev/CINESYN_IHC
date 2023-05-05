@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>CINESYN - Pagina Inicial</title>
+    <link rel="stylesheet" href="./Style/index.css">
+    <link rel="shortcut icon" href="./IMG/logoCINESYN_SemLetras.png" type="image/x-icon">
+</head>
+<body>
+    <section>
+            <div class="painelLogin" id="painelLogin">
+                <img src="./IMG/logoCINESYN_SemLetras.png" alt="imagem do usuario">
+                <form id="formLogin" method="POST" action="./Banco de dados/verificationUser.php">
+                    <label for="user">E - mail:</label>
+                    <input type="email" name="emailUser" id="emailUser">
+                    
+                    <label for="password">Senha:</label>
+                    <input type="password" name="password" id="password">
+                
+                    <div class="btnEnter">
+                        <button type="submit" id="btnLogin"><a href="./Pagina Filmes/paginaFilmes.html">Entrar</a></button>
+                    </div>
+                </form>
+                <div class="grpBtnLogin">
+                    <button class="google"><img src="./IMG/btnLogin/google-logo.png" alt="Logar com google"><p>Entrar com o google</p></button>
+                    <button class="facebook"><img src="./IMG/btnLogin/icons8-facebook-novo-60.png" alt="Logar com facebook"><p>Entrar com o facebook</p></p></button>
+                    <button class="apple"><img src="./IMG/btnLogin/apple-64.ico" alt="Logar com o IOS"><p>Entrar com o IOS</p></button>
+                </div>
+                <div class="helpLinks">
+                    <a href="cadastro.php">Cadastrar-se</a>
+                    <a href="recoverPassword.html">Recuperar senha</a>
+                </div>
+            </div>
+        
+    </section>
+
+    <script src="./Scripts/boxShadowPainel.js"></script>
+</body>
+</html>

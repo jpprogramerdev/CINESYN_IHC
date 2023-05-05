@@ -1,0 +1,94 @@
+/*Fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');/*font-family: 'Roboto', sans-serif;v*/
+
+.container {
+  position: relative;
+  padding: 15px;
+  width: 92%;
+  height:auto;
+  margin: 0 auto;
+}
+
+p.categoryTitle{
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.gallery-wrapper {
+  overflow-x: auto;
+  padding: 0 100px; /* Adicione padding à esquerda e à direita */
+}
+
+.arrow-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  font-size: 20px;
+  line-height: 300px;
+  color: #000;
+  transition: all 600ms ease-in-out;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0px;
+  margin-right: 10px;
+}
+
+.arrow-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 20px;
+  line-height: 300px;
+  color: #000;
+  transition: all 600ms ease-in-out;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0px;
+}
+
+.arrow-right {
+  right: 0;
+  left: auto;
+  text-align: right;
+}
+
+.arrow-left {
+  right: auto;
+  left: 0;
+  text-align: left;
+}
+
+.gallery {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 50px;
+  margin: 10px;
+}
+
+.item:first-child {
+  margin-left: -110px;
+}
+
+
+.item {
+  width: 50%;
+  height: auto;
+  flex-shrink: 0;
+  transition: all 600ms ease-in-out;
+  transition: transform 0.5s ease;
+  position: relative;
+  border: 2px solid black;
+}
+
+.gallery-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+
+.gallery-wrapper {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
