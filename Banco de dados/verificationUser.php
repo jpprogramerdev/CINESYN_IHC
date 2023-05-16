@@ -1,4 +1,5 @@
 <?php
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -17,20 +18,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $senha = $_POST["password"];
 
     // faça a verificação no banco de dados para ver se o usuário existe
-    $sql = "SELECT * FROM user_CINESYN WHERE email='$email' AND senha_user='$senha'";
+    $sql = "SELECT * FROM user_cinesyn WHERE email_user='$email' AND senha_user='$senha'";
     $resultado = mysqli_query($conexao, $sql);
 
     if (mysqli_num_rows($resultado) > 0) {
         $row = mysqli_fetch_assoc($resultado);
-        $nome = $row['nome'];
         session_start();
-        $_SESSION['nomeUsuario'] = $nome;
-        header('Location: ../Pagina Filmes/paginaFilmes.php');
-    }else {
+        $_SESSION['username'] = $row['nome_user'];
+        header("location: ../Pagina Filmes/paginaFilmes.php");
+        exit; 
+    } else {
         echo "Usuário não encontrado";
     }
 }
-
-// fecha a conexão com o banco de dados
-mysqli_close($conexao);
-?>

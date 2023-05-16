@@ -1,33 +1,29 @@
-const controls = document.querySelectorAll(".control");
-let currentItem = 0;
-const items = document.querySelectorAll(".item");
-const maxItems = items.length;
+const containers = document.querySelectorAll(".container");
 
-controls.forEach((control) => {
-  control.addEventListener("click", (e) => {
-    isLeft = e.target.classList.contains("arrow-left");
+containers.forEach((container) => {
+  const controlLeft = container.querySelector(".arrow-left");
+  const controlRight = container.querySelector(".arrow-right");
+  const gallery = container.querySelector(".gallery");
+  const items = container.querySelectorAll(".item");
+  const maxItems = items.length;
+  let currentItem = 0;
 
-    if (isLeft) {
-      currentItem -= 1;
-    } else {
-      currentItem += 1;
-    }
+  controlLeft.addEventListener("click", () => {
+    currentItem = (currentItem - 1 + maxItems) % maxItems;
+    updateCarousel();
+  });
 
-    if (currentItem >= maxItems) {
-      currentItem = 0;
-    }
+  controlRight.addEventListener("click", () => {
+    currentItem = (currentItem + 1) % maxItems;
+    updateCarousel();
+  });
 
-    if (currentItem < 0) {
-      currentItem = maxItems - 1;
-    }
-
+  function updateCarousel() {
     items.forEach((item) => item.classList.remove("current-item"));
-
+    items[currentItem].classList.add("current-item");
     items[currentItem].scrollIntoView({
       behavior: "smooth",
-      inline: "start"
+      inline: "start",
     });
-
-    items[currentItem].classList.add("current-item");
-  });
+  }
 });
