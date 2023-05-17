@@ -60,7 +60,7 @@ p.categoryTitle{
   text-align: left;
 }
 
-.gallery {
+.gallery{
   display: flex;
   flex-flow: row nowrap;
   gap: 50px;
@@ -72,23 +72,22 @@ p.categoryTitle{
 }
 
 
-.item {
-  width: 50%;
-  height: auto;
+a img.item {
+  width: 600px;
+  height: 300px;
   flex-shrink: 0;
   transition: all 600ms ease-in-out;
   transition: transform 0.5s ease;
   position: relative;
   border: 2px solid black;
+  margin-right: 100px;
 }
 
 .gallery-wrapper::-webkit-scrollbar {
   display: none;
 }
 
-
 .gallery-wrapper {
   -ms-overflow-style: none; 
   scrollbar-width: none; 
 }
-

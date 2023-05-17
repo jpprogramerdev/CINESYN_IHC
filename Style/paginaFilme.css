@@ -1,0 +1,53 @@
+/*Fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');/*font-family: 'Roboto', sans-serif;*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+  }
+
+section {
+    padding-top: 3%;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    margin:0px 10px;
+}
+
+.sinopseFilme {
+    display: flex;
+    gap: 10px auto;
+    align-items: flex-start;
+    padding-bottom: 20px; /* Espaçamento inferior para separar do rodapé */
+}
+
+.video {
+    width: 550px;
+    height: auto;
+}
+
+.textSinopse {
+    flex: 1; /* Ocupa todo o espaço restante na linha */
+    margin-left: 3%;
+}
+
+p.sinopse {
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    font-size: 0.9rem;
+}
+
+/* Adicione estas regras para posicionar o vídeo no rodapé */
+section::after {
+    content: "";
+    display: block;
+    height: 50px; /* Altura do espaço reservado para o rodapé */
+}
+
+.sinopseFilme {
+    margin-bottom: -50px; /* Valor igual à altura do espaço reservado para o rodapé */
+}

@@ -27,7 +27,7 @@
 
                     <img src="imagem.png" alt="" class="imgUser" id="imgUser">
 
-                    <a href="./Pagina Filmes/paginaFilmes.html"><input type="submit" value="Enviar"></a>
+                    <a href="./Pagina Filmes/indexFilmes.html"><input type="submit" value="Enviar"></a>
                 </form>
                 
                 <div class="helpLinks">
@@ -41,11 +41,11 @@
     <script src="./Scripts/boxShadowPainel.js"></script>
     <script>
         const imagem = document.getElementById("imgUser");
-  const input = document.getElementById("upImgUser");
-  
-  input.addEventListener("change", () => {
-    imagem.src = URL.createObjectURL(input.files[0]);
-  });
+        const input = document.getElementById("upImgUser");
+        
+        input.addEventListener("change", () => {
+            imagem.src = URL.createObjectURL(input.files[0]);
+        });
     </script>
 </body>
 </html>

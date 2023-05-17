@@ -21,9 +21,24 @@ containers.forEach((container) => {
   function updateCarousel() {
     items.forEach((item) => item.classList.remove("current-item"));
     items[currentItem].classList.add("current-item");
-    items[currentItem].scrollIntoView({
-      behavior: "smooth",
-      inline: "start",
-    });
+
+    const containerRect = container.getBoundingClientRect();
+    const itemRect = items[currentItem].getBoundingClientRect();
+
+    if (itemRect.top < containerRect.top || itemRect.bottom > containerRect.bottom) {
+      // O item está fora da visualização do contêiner, rolar com animação suave
+      items[currentItem].scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "start",
+      });
+    } else {
+      // O item está dentro da visualização do contêiner, rolar instantaneamente
+      items[currentItem].scrollIntoView({
+        behavior: "auto",
+        block: "nearest",
+        inline: "start",
+      });
+    }
   }
 });
