@@ -35,7 +35,7 @@ containers.forEach((container) => {
     } else {
       // O item está dentro da visualização do contêiner, rolar instantaneamente
       items[currentItem].scrollIntoView({
-        behavior: "auto",
+        behavior: "smooth",
         block: "nearest",
         inline: "start",
       });

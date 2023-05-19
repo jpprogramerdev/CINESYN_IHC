@@ -26,7 +26,7 @@ section {
     display: flex;
     gap: 10px auto;
     align-items: flex-start;
-    padding-bottom: 20px; /* Espaçamento inferior para separar do rodapé */
+    padding-bottom: 20px; 
 }
 
 .areaVideo{
@@ -36,19 +36,20 @@ section {
 }
 
 .video {
-    width: 550px;
+    width: 700px;
     height: auto;
 }
 
 .textSinopse {
-    flex: 1; /* Ocupa todo o espaço restante na linha */
+    flex: 1;
     margin-left: 5%;
-    max-width: 49%; /* Defina a largura máxima do contêiner de texto */
-    word-wrap: break-word; /* Adicione quebras de linha automáticas */
+    max-width: 65%;
+    word-wrap: break-word; 
 }
 
 .rate {
     display: flex;
+    flex-direction: row-reverse;
     margin-top: 10px;
 }
 
@@ -93,11 +94,11 @@ p.sinopse {
 section::after {
     content: "";
     display: block;
-    height: 50px; /* Altura do espaço reservado para o rodapé */
+    height: 50px;
 }
 
 .sinopseFilme {
-    margin-bottom: -50px; /* Valor igual à altura do espaço reservado para o rodapé */
+    margin-bottom: -50px;
 }
 
 .comentarios {
