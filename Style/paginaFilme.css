@@ -1,5 +1,9 @@
 /*Fontes*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');/*font-family: 'Roboto', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,600&display=swap');/*font-family: 'Roboto Mono', monospace;*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');/*font-family: 'Roboto Mono', monospace;*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100;1,400&display=swap');/*font-family: 'Poppins', sans-serif;*/
+
 *{
     margin: 0;
     padding: 0;
@@ -8,7 +12,7 @@
 
 body {
     overflow: hidden;
-  }
+}
 
 section {
     padding-top: 3%;
@@ -25,6 +29,12 @@ section {
     padding-bottom: 20px; /* Espaçamento inferior para separar do rodapé */
 }
 
+.areaVideo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .video {
     width: 550px;
     height: auto;
@@ -32,16 +42,54 @@ section {
 
 .textSinopse {
     flex: 1; /* Ocupa todo o espaço restante na linha */
-    margin-left: 3%;
+    margin-left: 5%;
+    max-width: 49%; /* Defina a largura máxima do contêiner de texto */
+    word-wrap: break-word; /* Adicione quebras de linha automáticas */
+}
+
+.rate {
+    display: flex;
+    margin-top: 10px;
+}
+
+.rate input[type="radio"] {
+    display: none;
+}
+
+.rate label {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.rate label:before {
+    content: '★';
+}
+
+.rate input[type="radio"]:checked ~ label {
+    color: #ffc700;
+}
+
+.rate label:hover,
+.rate label:hover ~ label {
+    color: #deb217;
+}
+
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
 }
 
 p.sinopse {
     font-family: 'Roboto', sans-serif;
     text-align: justify;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
-/* Adicione estas regras para posicionar o vídeo no rodapé */
 section::after {
     content: "";
     display: block;
@@ -50,4 +98,37 @@ section::after {
 
 .sinopseFilme {
     margin-bottom: -50px; /* Valor igual à altura do espaço reservado para o rodapé */
+}
+
+.comentarios {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+.comentarios h2 {
+    font-family: 'Roboto Mono', monospace;
+    margin-bottom: 10px;
+}
+
+.comentarios .comentario {
+    margin-bottom: 10px;
+}
+
+.comentarios .comentario span {
+    font-weight: bold;
+}
+
+.comentarios textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.answerUser{
+    font-family: 'Roboto Mono', monospace;  
+}
+
+.textUser{
+    color: black;
+    font-family: 'Poppins', sans-serif;
 }
