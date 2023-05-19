@@ -101,7 +101,7 @@ section::after {
 }
 
 .comentarios {
-    margin-top: 20px;
+    margin-top: 50px;
     border-top: 1px solid #ccc;
     padding-top: 20px;
 }
@@ -120,8 +120,26 @@ section::after {
 }
 
 .comentarios textarea {
-    width: 100%;
+    width: 99%;
     margin-bottom: 10px;
+}
+
+.comentario-btn{
+    border:0px solid;
+    width: 73px;
+    height: 39px;
+    border-radius: 10px;
+    background-color: #dad2d2;
+    transition: .5s;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    cursor: pointer;    
+}
+
+.comentario-btn:hover{
+    filter: brightness(0.95);
+    transition: .5s;
+
 }
 
 .answerUser{
