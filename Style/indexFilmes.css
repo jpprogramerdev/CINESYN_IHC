@@ -13,7 +13,7 @@ body{
 }
 
 header.category {
-    width: 100%;
+    width: auto;
     min-height: 40px;
     display: flex;
     flex-direction: row;
