@@ -10,9 +10,6 @@
     box-sizing: border-box;
 }
 
-body {
-    overflow: hidden;
-}
 
 section {
     padding-top: 3%;
@@ -22,11 +19,40 @@ section {
     margin:0px 10px;
 }
 
+.tituloFilme{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 5%;
+}
+
+
 .sinopseFilme {
     display: flex;
     gap: 10px auto;
     align-items: flex-start;
     padding-bottom: 20px; 
+    flex-wrap: wrap;
+}
+.sinopseFilme::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.cartazFilme {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+
+.textSinopse {
+    overflow: hidden;
+}
+
+.sinopse {
+    text-align: justify;
 }
 
 .areaVideo{
@@ -40,12 +66,6 @@ section {
     height: auto;
 }
 
-.textSinopse {
-    flex: 1;
-    margin-left: 5%;
-    max-width: 65%;
-    word-wrap: break-word; 
-}
 
 .rate {
     display: flex;
@@ -150,4 +170,17 @@ section::after {
 .textUser{
     color: black;
     font-family: 'Poppins', sans-serif;
+}
+
+.cartazFilme{
+    width: 30%;
+}
+
+@media (max-width:1240px){
+    .textSinopse {
+        flex: 1;
+        margin-left: 2%;
+        max-width: 38%;
+        word-wrap: break-word; 
+    }
 }
