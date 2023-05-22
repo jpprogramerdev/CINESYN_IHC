@@ -47,6 +47,8 @@ header.category {
     border: none;
     cursor: pointer;
 }
+
+
   
 .category img.usuario {
     width: 50px;
@@ -78,4 +80,19 @@ header.category {
 button.btnSreach{
     background: transparent;
     border:0px;
+}
+
+.subHeader{
+    background-color: #000000c7;
+}
+
+.subHeader summary.categoryFilms{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+  
+.menu{
+    display: flex;
+    flex-direction: column;
 }
