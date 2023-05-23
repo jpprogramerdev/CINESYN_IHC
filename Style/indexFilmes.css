@@ -1,5 +1,5 @@
 /*Fontes*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');/*font-family: 'Roboto', sans-serif;v*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');/*font-family: 'Roboto', sans-serif;*/
 
 
 *{
@@ -47,8 +47,6 @@ header.category {
     border: none;
     cursor: pointer;
 }
-
-
   
 .category img.usuario {
     width: 50px;
@@ -82,28 +80,58 @@ button.btnSreach{
     border:0px;
 }
 
-
-.subHeader summary.categoryFilms{
-    color: white;
+.subHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    background-color: #000000e3;
     font-family: 'Roboto', sans-serif;
+    padding: 5px;
+}
+
+.subHeader a{
+    color: white;
+    text-decoration: none;
+}
+
+.subHeader .menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.subHeader .menu li {
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    color: white;
     cursor: pointer;
 }
-
-.subHeader{
-    width: 100%;
-    position: fixed;
-    padding-bottom: 5px;
-}
-
-.subHeader details {
-    top: 0;
+  
+.subHeader .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
     left: 0;
-    z-index: 9999;
-    background-color: #000000c7;
+    background-color: #000;
     padding: 10px;
 }
   
-.subHeader details .menu {
-    display: flex;
-    flex-direction: column;
-  }
+.subHeader .submenu li {
+    margin-bottom: 5px;
+}
+  
+.subHeader .submenu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.submenu {
+    display: none;
+}
+  
+.submenu.active {
+    display: block;
+} 
