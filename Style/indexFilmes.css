@@ -11,6 +11,9 @@
 body{
     background-color: #ffecec;
 }
+section{
+    padding-top: 20px;
+}
 
 header.category {
     width: auto;
@@ -53,9 +56,10 @@ header.category {
     height: auto;
 }
 
-.user{
+.user, .user a{
     display: flex;
     flex-direction: row;
+    text-decoration: none;
 }
 
 .user p.userCont{

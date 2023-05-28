@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Style/index.css" />
+    <link rel="stylesheet" href="../Style/indexFilmes.css" />
+    <link rel="stylesheet" href="../Style/styleMenu.css" />
+    <title>CINESYN - Editar Perfil</title>
+  </head>
+  <body>
+    <header class="category">
+      <img src="../IMG/logoCINESYN_SemLetras.png" alt="Logo" class="logo" />
+
+      <form action="/search" method="get">
+        <input type="text"name="q" placeholder="Digite sua busca aqui" class="barSreach"
+        />
+      </form>
+
+      <div class="user">
+        <a href="../viewUser/editarPerfil.html"><img src="../IMG/usuario.png" class="usuario" />
+        <p class="userCont">Minha<br />conta</p></a>
+      </div>
+      </div>
+    </header>
+
+    <div class="subHeader">
+      <a href="myFavorites.html">Meus favoritos</a>
+      <ul class="menu">
+        <li class="categoryFilms">
+          Categorias
+          <ul class="submenu">
+            <li><a href="">Drama</a></li>
+            <li><a href="">Comédia</a></li>
+            <li><a href="">Suspense</a></li>
+            <li><a href="">Animação</a></li>
+            <li><a href="">Terror</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <section>
+      <div class="painelLogin" id="painelLogin">
+        <p class="title">Editar perfil</p>
+        <form class="formLogin">
+          <label for="userName">Nome:</label>
+          <input type="text" name="userName" id="userName" required />
+
+          <label for="user">E - mail:</label>
+          <input type="email" name="emailUser" id="emailUser" required />
+
+          <label for="password">Senha:</label>
+          <input type="password" name="password" id="password" required />
+
+          <label for="imgUser">Foto de perfil</label>
+          <input type="file" name="imagem" />
+
+          <img src="imagem.png" alt="" class="imgUser" id="imgUser" />
+
+          <div class="btnEnter">
+            <button type="submit">
+              <a href="./Pagina Filmes/indexFilmes.html">
+              Salvar
+              </a>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script src="../Scripts/loadImg.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".categoryFilms").click(function () {
+          $(".submenu").toggleClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>

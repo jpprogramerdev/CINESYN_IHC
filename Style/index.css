@@ -17,7 +17,8 @@ section{
 
 .painelLogin{
     width: 360px;
-    height: 950px;
+    height: auto;
+    padding-bottom: 10px;
     border: 1px solid black;
     border-radius: 10px;
     margin: auto; 
@@ -38,7 +39,7 @@ section{
     margin: auto;
 }
 
- form input[type="text"], form input[type="password"],  form input[type="email"]{
+form input[type="text"]#userName, form input[type="password"],  form input[type="email"]{
     width: 82%;
     height: 35px;
     border-radius: 15px;
@@ -50,8 +51,8 @@ section{
     align-items: center;
     margin: auto auto 40px auto;
 }
+
 form input[type="file"],.imgUser{
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,7 +63,6 @@ form input[type="file"],.imgUser{
     filter: brightness(0.9);
     transition: .5s;
 }
-
 
 .painelLogin label{
     font-family: 'Montserrat', sans-serif; 
@@ -184,4 +184,13 @@ form input[type="file"],.imgUser{
     border-radius: 50%;
     object-fit: cover;
     background:#dfdfdf;
+}
+
+p.title{
+    font-size: 2rem;
+    text-align: center;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: #000000c4 1px 1px 10px;
+    padding: 20px;
 }

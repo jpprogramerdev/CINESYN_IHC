@@ -45,7 +45,6 @@ section .containerCategory{
 
 .favoriteCommunity{
     width: 40%;
-    margin: 0px 0px 0px 0px;
     display: flex;
     flex-direction: column;
 }
@@ -73,14 +72,13 @@ section .containerCategory{
 }
 
 .listFilmesFavorite{
-    width: 70%;
+    width: 60%;
     padding-left:15px;
 }
 
 .infoFilm{
     width: 40%;
     margin-left: 10px;
-    
 }
 
 .infoFilm p{
