@@ -1,0 +1,72 @@
+.subHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    background-color: #000000e3;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px;
+}
+
+.subHeader a{
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.subHeader a:hover, .subHeader .menu li:hover{
+    transition: .3s;
+    color: #ffbbbb;
+}
+
+.subHeader .menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.subHeader .menu li {
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    color: white;
+    cursor: pointer;
+}
+  
+.subHeader .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #490000;
+    border-radius: 0px 0px 15px 15px;
+    padding: 20px;
+    z-index: 9999;
+    
+}
+  
+.subHeader .submenu li {
+    margin-bottom: 5px;
+}
+  
+.subHeader .submenu li a {
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.subHeader .submenu li a:hover {
+    color: #ffbbbb;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.submenu {
+    display: none;
+}
+  
+.submenu.active {
+    transition: .5s;
+    display: block;
+} 

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CINESYN - Drama</title>
+    <link rel="stylesheet" href="../Style/carrosel.css" />
+    <link rel="stylesheet" href="../Style/paginaCategoria.css">
+    <link rel="stylesheet" href="../Style/indexFilmes.css">
+    <link rel="stylesheet" href="../Style/styleMenu.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <header class="category">
+      <img src="../IMG/logoCINESYN_SemLetras.png" alt="Logo" class="logo" />
+
+      <form action="/search" method="get">
+        <input
+          type="text"
+          name="q"
+          placeholder="Digite sua busca aqui"
+          class="barSreach"
+        />
+      </form>
+
+      <div class="user">
+        <img src="../IMG/usuario.png" class="usuario" />
+        <p class="userCont">Minha<br />conta</p>
+      </div>
+    </header>
+
+    <div class="subHeader">
+      <a href="myFavorites.html">Meus favoritos</a>
+      <ul class="menu">
+        <li class="categoryFilms">
+          Categorias
+          <ul class="submenu">
+            <li><a href="">Drama</a></li>
+            <li><a href="">Comédia</a></li>
+            <li><a href="">Suspense</a></li>
+            <li><a href="">Animação</a></li>
+            <li><a href="">Terror</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <section class="content"> 
+        <p class="tituloPagina">Drama</p>
+        <div class="containterDescription">
+            <p class="descriptionCategory">Filmes de drama são obras cinematográficas que exploram histórias emocionalmente intensas, abordando temas como amor, perda, conflitos familiares e questões sociais. Eles se concentram no desenvolvimento dos personagens e na narrativa, proporcionando uma experiência reflexiva e emocional para os espectadores. Esses filmes podem ser baseados em eventos reais ou fictícios e englobam subgêneros como drama romântico, histórico, psicológico e de guerra. Sua principal característica é a exploração das emoções humanas e da condição humana</p>
+        </div>
+        <div class="containerCategory">
+            <div class="listFilmesFavorite">
+                <p class="topSemana">Top da semana</p>
+                <img src="../IMG/FILMES/Drama/Cartaz/CREDIII.jpg" alt="CREDIII">
+                <img src="../IMG/FILMES/Drama/Cartaz/A baleia.jpg" alt="A baleia">
+                <img src="../IMG/FILMES/Drama/Cartaz/Extraordinario.jpg" alt="Extraordinario">
+                <img src="../IMG/FILMES/Drama/Cartaz/O Exorcista do papa.jpg" alt="O Exocista do Papa">
+                <img src="../IMG/FILMES/Drama/Cartaz/A culpa é das estrelas.jpg" alt="A Culpa é das estrelas">
+                <img src="../IMG/FILMES/Drama/Cartaz/Batmam.jpg" alt="Eu sou a lenda">
+            </div>
+            <div class="favoriteCommunity">
+                <p class="filmFavoriteCommunity">Favorito do publico</p>
+                <div class="filmDesscription">
+                  <img src="../IMG/FILMES/Drama/Cartaz/O-poderoso-chefão.jpg">
+                  <div class="infoFilm">
+                    <p class="yearFilm">📅: 1972</p>
+                    <p class="timeFilm">🕑: 175 minutos</p>
+                    <p class="sinopseFilm">📝: "O Poderoso Chefão" é um aclamado filme dirigido por Francis Ford Coppola, que retrata a vida na máfia em Nova York. A história se concentra em Don Vito Corleone, chefe de uma família mafiosa, e seu filho Michael, cuja vida é transformada ao se envolver nos negócios da família. Com temas de poder, lealdade e traição, o filme apresenta atuações marcantes, como a de Marlon Brando, e é reconhecido como um clássico do cinema.</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../Scripts/carrosel.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".categoryFilms").click(function () {
+          $(".submenu").toggleClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>
