@@ -70,3 +70,17 @@
     transition: .5s;
     display: block;
 } 
+
+.subMenuFilm {
+    display: none;
+    float: right;
+}
+  
+.subMenuFilm img{
+    width: 600px;
+    height: 300px;
+}
+
+.subMenuFilm.open {
+    display: block;
+}

@@ -13,17 +13,34 @@
 </head>
 <body>
     <header class="category">
-        <img src="../../IMG/logoCINESYN_SemLetras.png" alt="Logo" class="logo">
-
+        <a href="../indexFilmes.html"><img src="../IMG/logoCINESYN_SemLetras.png" alt="Logo" class="logo"></a>
+  
         <form action="/search" method="get">
             <input type="text" name="q" placeholder="Digite sua busca aqui" class="barSreach">
         </form>
+  
         <div class="user">
-            <a href="../viewUser/editarPerfil.html"><img src="../IMG/usuario.png" class="usuario" />
-            <p class="userCont">Minha<br />conta</p></a>
-          </div>
+          <a href="../viewUser/editarPerfil.html"><img src="../IMG/usuario.png" class="usuario" />
+          <p class="userCont">Minha<br />conta</p></a>
+        </div>
     </header>
+  
+    <div class="subHeader">
+      <ul class="menu">
+        <li class="categoryFilms">
+          Categorias
+          <ul class="submenu">
+            <li><a href="../../Site Categorias/Drama.html">Drama</a></li>
+            <li><a href="">Comédia</a></li>
+            <li><a href="">Suspense</a></li>
+            <li><a href="">Animação</a></li>
+            <li><a href="">Terror</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>  
 
+    
     <section>
         <p class="tituloFilme">O Poderoso Chefão</p>
         <div class="sinopseFilme">
@@ -58,7 +75,11 @@
             <button id="comentario-btn" class="comentario-btn">Enviar</button>
         </div>
     </section>
-
+    <header class="footerDiv">
+      <div class="footer">
+        <p class="textFooter">©J. P. G. Fernandes</p>
+      </div>
+    </header>
     <script src="../../Scripts/areaComentario.js">
         
     </script>
